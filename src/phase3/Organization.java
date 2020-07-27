@@ -10,10 +10,7 @@ package phase3;
  */
 public class Organization {
 
-    private String orgnizationName;
-    private String orgnizationAddress;
-    private String orgnizationPhoneNo;
-    private String orgnizationEmail;
+    private String orgnizationName, orgnizationAddress, orgnizationPhoneNo, orgnizationEmail;
     private Campaign campaign;
 
     public Organization(String orgnizationName, String orgnizationAddress, String orgnizationPhoneNo, String orgnizationEmail) {
