@@ -32,9 +32,9 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Component id="pblOrgInput" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="pnlOrgOutput" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="pnlCampaignInput" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               <Component id="pnlCampaignOutput" min="-2" max="-2" attributes="0"/>
@@ -44,7 +44,7 @@
               <Component id="pnlDonorInput" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="pnlDonorOutput" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="581" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -216,13 +216,19 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblOrgNameOut" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="lblOrgAddressOut" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="lblOrgPhoneNoOut" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="lblOrgEmailOut" min="-2" max="-2" attributes="0"/>
                       <Component id="lblOrgHeaderOutPut" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lblOrgIDOut" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblOrgNameOut" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
-                  <EmptySpace pref="21" max="32767" attributes="0"/>
+                  <EmptySpace pref="77" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -230,7 +236,9 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Component id="lblOrgHeaderOutPut" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="43" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="lblOrgIDOut" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="11" max="32767" attributes="0"/>
                   <Component id="lblOrgNameOut" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   <Component id="lblOrgAddressOut" min="-2" max="-2" attributes="0"/>
@@ -272,6 +280,11 @@
             <Property name="text" type="java.lang.String" value="Output"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JLabel" name="lblOrgIDOut">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="ID:"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="pnlCampaignOutput">
@@ -281,10 +294,12 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblCampaignHeaderOutPut" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblCampaignArrayDetails" alignment="0" min="-2" pref="340" max="-2" attributes="0"/>
+                      <Component id="lblCampaignHeaderOutPut" min="-2" max="-2" attributes="0"/>
+                      <Component id="cNameOutput" min="-2" max="-2" attributes="0"/>
+                      <Component id="cDate" min="-2" max="-2" attributes="0"/>
+                      <Component id="cVenue" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="0" pref="28" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="309" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -292,9 +307,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="lblCampaignHeaderOutPut" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="lblCampaignArrayDetails" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="154" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                  <Component id="cNameOutput" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="cDate" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                  <Component id="cVenue" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="42" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -308,9 +327,19 @@
             <Property name="text" type="java.lang.String" value="Output"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblCampaignArrayDetails">
+        <Component class="javax.swing.JLabel" name="cNameOutput">
           <Properties>
-            <Property name="text" type="java.lang.String" value="CampaignArrayDetails"/>
+            <Property name="text" type="java.lang.String" value="Campaign name:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="cDate">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Start Date"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="cVenue">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Venue"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -506,6 +535,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtDonorUmpStudName">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDonorUmpStudNameActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnDonorUmpStudSubmitButton">
               <Properties>
@@ -718,6 +750,7 @@
                               <Component id="lblCampaignName" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="lblCampaignStartDate" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="lblCampaignVenue" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="cmpUpdate" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -727,9 +760,11 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txtOCampaignStartDate" alignment="1" min="-2" pref="240" max="-2" attributes="0"/>
-                                      <Component id="txtCampainVenue" alignment="1" min="-2" pref="240" max="-2" attributes="0"/>
-                                      <Component id="btnCampaignSubmitButton" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jDateChooser1" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txtCampainVenue" alignment="1" min="-2" pref="240" max="-2" attributes="0"/>
+                                          <Component id="btnCampaignSubmitButton" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
                           </Group>
@@ -749,18 +784,21 @@
                       <Component id="lblCampaignName" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtCampaignName" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txtOCampaignStartDate" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblCampaignStartDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="lblCampaignStartDate" min="-2" max="-2" attributes="0"/>
+                      <Component id="jDateChooser1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtCampainVenue" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lblCampaignVenue" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="32" max="32767" attributes="0"/>
-                  <Component id="btnCampaignSubmitButton" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btnCampaignSubmitButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cmpUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -782,8 +820,6 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtCampaignName">
         </Component>
-        <Component class="javax.swing.JTextField" name="txtOCampaignStartDate">
-        </Component>
         <Component class="javax.swing.JLabel" name="lblCampaignStartDate">
           <Properties>
             <Property name="text" type="java.lang.String" value="Campaign Start Date  : "/>
@@ -804,6 +840,16 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCampaignSubmitButtonActionPerformed"/>
           </Events>
         </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="cmpUpdate">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Update?"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmpUpdateActionPerformed"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="pnlDonorOutput">
@@ -811,20 +857,17 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <Component id="lblDonorHeaderOutPut" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="309" max="32767" attributes="0"/>
-              </Group>
-              <Component id="lblDonorResult" max="32767" attributes="0"/>
+              <Component id="lblDonorHeaderOutPut" min="-2" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="369" max="-2" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="lblDonorHeaderOutPut" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="lblDonorResult" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="256" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="239" max="-2" attributes="0"/>
+                  <EmptySpace pref="44" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -838,11 +881,75 @@
             <Property name="text" type="java.lang.String" value="Output"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblDonorResult">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="donorFullResult"/>
-          </Properties>
-        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="donorTable">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="8" rowCount="4">
+                    <Column editable="true" title="Student ID" type="java.lang.Object"/>
+                    <Column editable="true" title="Donor name" type="java.lang.Object"/>
+                    <Column editable="true" title="Gender" type="java.lang.Object"/>
+                    <Column editable="true" title="Age" type="java.lang.Object"/>
+                    <Column editable="true" title="Total Blood" type="java.lang.Object"/>
+                    <Column editable="true" title="Donated Blood" type="java.lang.Object"/>
+                    <Column editable="true" title="Campaign name" type="java.lang.Object"/>
+                    <Column editable="true" title="Comment" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
+                </Property>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>

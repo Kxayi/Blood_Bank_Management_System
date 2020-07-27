@@ -9,11 +9,11 @@ package phase3;
  * @author daus
  */
 public abstract class Donor implements Donate {
-    private String donorName;
-    private String donorGender;
+    private String donorName, donorGender;
+    
     private int donorAge;
-    private double donorTotalBlood;
-    private double donorDonatedAmount;
+    private double donorTotalBlood, donorDonatedAmount;
+  
 
     public Donor(String donorName, String donorGender, int donorAge, double donorTotalBlood) {
         this.donorName = donorName;
