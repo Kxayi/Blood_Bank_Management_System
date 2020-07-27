@@ -11,9 +11,7 @@ package phase3;
  */
 public class Campaign {
 
-    private String campaignName;
-    private String campaignStartDate;
-    private String campaignVenue;
+    private String campaignName, campaignStartDate, campaignVenue;
     private double campaignTotalDonatedBlood;
     private Donor donor;
     
