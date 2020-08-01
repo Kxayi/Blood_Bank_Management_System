@@ -101,6 +101,7 @@ public class DonorInformation extends javax.swing.JFrame {
         txtDonorGuestName = new javax.swing.JTextField();
         cmbDonorGuestGender = new javax.swing.JComboBox<>();
         txtDoorGuestAge = new javax.swing.JTextField();
+        txtDonorGuestBloodType = new javax.swing.JTextField();
         txtDonorGuestDonateAmount = new javax.swing.JTextField();
         btnDonorGuestSubmitButton = new javax.swing.JButton();
         jLabelDonorGuestIC = new javax.swing.JLabel();
@@ -113,7 +114,6 @@ public class DonorInformation extends javax.swing.JFrame {
         btnDonorGuestBackButton1 = new javax.swing.JButton();
         lblDonorTotalNum = new javax.swing.JLabel();
         lblDonorTotalView = new javax.swing.JLabel();
-        cmbDonorGuestBloodType = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -175,6 +175,13 @@ public class DonorInformation extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtDoorGuestAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 240, -1));
+
+        txtDonorGuestBloodType.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtDonorGuestBloodTypeKeyTyped(evt);
+            }
+        });
+        getContentPane().add(txtDonorGuestBloodType, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 240, -1));
 
         txtDonorGuestDonateAmount.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -259,9 +266,6 @@ public class DonorInformation extends javax.swing.JFrame {
         lblDonorTotalView.setText("jLabel3");
         getContentPane().add(lblDonorTotalView, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, -1, -1));
 
-        cmbDonorGuestBloodType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "AB", "O" }));
-        getContentPane().add(cmbDonorGuestBloodType, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, -1, -1));
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -272,21 +276,6 @@ public class DonorInformation extends javax.swing.JFrame {
             gender = genderArray[0];
         } else {
             gender = genderArray[1];
-        }
-        
-        String[] bloodtypeArray = {"A", "B", "AB", "O"};
-        String bloodtype = "none";
-        if (cmbDonorGuestBloodType.getSelectedIndex() == 0) {
-            bloodtype = bloodtypeArray[0];
-        } 
-        else if (cmbDonorGuestBloodType.getSelectedIndex() == 1) {
-            bloodtype = bloodtypeArray[1];
-        }
-        else if (cmbDonorGuestBloodType.getSelectedIndex() == 2) {
-            bloodtype = bloodtypeArray[2];
-        }
-        else {
-            bloodtype = bloodtypeArray[3];
         }
         
         if (checkBoxDonorGuestUpdate1.isSelected()) { //update info
@@ -301,7 +290,7 @@ public class DonorInformation extends javax.swing.JFrame {
                 pst.setString(2, txtDonorGuestName.getText());
                 pst.setString(3, gender);
                 pst.setString(4, txtDoorGuestAge.getText());
-                pst.setString(5, bloodtype);
+                pst.setString(5, txtDonorGuestBloodType.getText());
                 pst.setString(6, txtDonorGuestDonateAmount.getText());
                 pst.executeUpdate();
             
@@ -312,7 +301,7 @@ public class DonorInformation extends javax.swing.JFrame {
                 txtDonorGuestName.setText("");
                 cmbDonorGuestGender.setSelectedIndex(0);
                 txtDoorGuestAge.setText("");
-                cmbDonorGuestBloodType.setSelectedIndex(0);
+                txtDonorGuestBloodType.setText("");
                 txtDonorGuestDonateAmount.setText("");
                 JOptionPane.showMessageDialog(null,"Update Successful");
             } catch (Exception e) {
@@ -336,7 +325,7 @@ public class DonorInformation extends javax.swing.JFrame {
                 txtDonorGuestName.setText("");
                 cmbDonorGuestGender.setSelectedIndex(0);
                 txtDoorGuestAge.setText("");
-                cmbDonorGuestBloodType.setSelectedIndex(0);
+                txtDonorGuestBloodType.setText("");
                 txtDonorGuestDonateAmount.setText("");
                 JOptionPane.showMessageDialog(null,"Delete Successful");
             } catch (Exception e) {
@@ -354,7 +343,7 @@ public class DonorInformation extends javax.swing.JFrame {
                 pst.setString(2, txtDonorGuestName.getText());
                 pst.setString(3, gender);
                 pst.setString(4, txtDoorGuestAge.getText());
-                pst.setString(5, bloodtype);
+                pst.setString(5, txtDonorGuestBloodType.getText());
                 pst.setString(6, txtDonorGuestDonateAmount.getText());
                 pst.setString(7, txtDonorGuestCampaignID.getText()); //campaign id
                 pst.execute();
@@ -366,7 +355,7 @@ public class DonorInformation extends javax.swing.JFrame {
                 txtDonorGuestName.setText("");
                 cmbDonorGuestGender.setSelectedIndex(0);
                 txtDoorGuestAge.setText("");
-                cmbDonorGuestBloodType.setSelectedIndex(0);
+                txtDonorGuestBloodType.setText("");
                 txtDonorGuestDonateAmount.setText("");
                 JOptionPane.showMessageDialog(null,"Save Successful");
             } catch (Exception e) {
@@ -389,7 +378,7 @@ public class DonorInformation extends javax.swing.JFrame {
             txtDonorGuestName.setEditable(false);
             cmbDonorGuestGender.setEnabled(false);
             txtDoorGuestAge.setEditable(false);
-            cmbDonorGuestBloodType.setEnabled(false);
+            txtDonorGuestBloodType.setEditable(false);
             txtDonorGuestDonateAmount.setEditable(false);
         }
         else {
@@ -397,7 +386,7 @@ public class DonorInformation extends javax.swing.JFrame {
             txtDonorGuestName.setEditable(true);
             cmbDonorGuestGender.setEnabled(true);
             txtDoorGuestAge.setEditable(true);
-            cmbDonorGuestBloodType.setEnabled(true);
+            txtDonorGuestBloodType.setEditable(true);
             txtDonorGuestDonateAmount.setEditable(true);
         }
     }//GEN-LAST:event_checkBoxDonorGuestDeleteActionPerformed
@@ -415,17 +404,7 @@ public class DonorInformation extends javax.swing.JFrame {
                         break;
        }
        txtDoorGuestAge.setText(model.getValueAt(i,3).toString());
-       String bloodtype = model.getValueAt(i,4).toString();
-       switch(bloodtype){
-           case "A": cmbDonorGuestBloodType.setSelectedIndex(0);
-                        break;
-           case "B": cmbDonorGuestBloodType.setSelectedIndex(1);
-                        break;
-           case "AB": cmbDonorGuestBloodType.setSelectedIndex(2);
-                        break;
-           case "O": cmbDonorGuestBloodType.setSelectedIndex(3);
-                        break;
-       }
+       txtDonorGuestBloodType.setText(model.getValueAt(i,4).toString());
        txtDonorGuestDonateAmount.setText(model.getValueAt(i,5).toString());
        //txtDonorGuestCampaignID.setText(model.getValueAt(i,7).toString());
     }//GEN-LAST:event_jTable_DonorTableMouseClicked
@@ -435,7 +414,7 @@ public class DonorInformation extends javax.swing.JFrame {
         txtDonorGuestName.setText("");
         cmbDonorGuestGender.setSelectedIndex(0);
         txtDoorGuestAge.setText("");
-        cmbDonorGuestBloodType.setSelectedIndex(0);
+        txtDonorGuestBloodType.setText("");
         txtDonorGuestDonateAmount.setText("");
     }//GEN-LAST:event_btnDonorGuestResetButtonActionPerformed
 
@@ -454,9 +433,9 @@ public class DonorInformation extends javax.swing.JFrame {
 
     private void btnDonorGuestBackButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDonorGuestBackButton1ActionPerformed
         this.toBack();
-        Cmp leaveInfo = new Cmp();
-        leaveInfo.setVisible(false);
-        leaveInfo.toFront(); //go to campaign interface
+//        Cmp leaveInfo = new Cmp();
+//        leaveInfo.setVisible(false);
+//        leaveInfo.toFront(); //go to campaign interface
     }//GEN-LAST:event_btnDonorGuestBackButton1ActionPerformed
 
     private void txtDonorGuestICKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDonorGuestICKeyPressed
@@ -501,6 +480,13 @@ public class DonorInformation extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_txtDoorGuestAgeKeyTyped
+
+    private void txtDonorGuestBloodTypeKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDonorGuestBloodTypeKeyTyped
+        char c = evt.getKeyChar();
+        if(Character.isDigit(c)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtDonorGuestBloodTypeKeyTyped
 
     private void txtDonorGuestDonateAmountKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDonorGuestDonateAmountKeyTyped
         char c = evt.getKeyChar();
@@ -551,7 +537,6 @@ public class DonorInformation extends javax.swing.JFrame {
     private javax.swing.JButton btnDonorGuestSubmitButton;
     private javax.swing.JCheckBox checkBoxDonorGuestDelete;
     private javax.swing.JCheckBox checkBoxDonorGuestUpdate1;
-    private javax.swing.JComboBox<String> cmbDonorGuestBloodType;
     private javax.swing.JComboBox<String> cmbDonorGuestGender;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelDonorGuestIC;
@@ -564,6 +549,7 @@ public class DonorInformation extends javax.swing.JFrame {
     private javax.swing.JLabel lblDonorHeader;
     private javax.swing.JLabel lblDonorTotalNum;
     private javax.swing.JLabel lblDonorTotalView;
+    private javax.swing.JTextField txtDonorGuestBloodType;
     private javax.swing.JTextField txtDonorGuestCampaignID;
     private javax.swing.JTextField txtDonorGuestDonateAmount;
     private javax.swing.JLabel txtDonorGuestGender;
