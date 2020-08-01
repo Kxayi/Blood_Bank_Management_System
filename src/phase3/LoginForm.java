@@ -225,8 +225,8 @@ public class LoginForm extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Login Successfully!");
                 OrgMainPage orgMain = new OrgMainPage();
                 orgMain.setVisible(true);
-              //GUIOrg orgMain = new GUIOrg();
-              //orgMain.setVisible(true);
+//                GUIOrg orgMain = new GUIOrg();
+                orgMain.setVisible(true);
                 setVisible(false);
             }
             else{

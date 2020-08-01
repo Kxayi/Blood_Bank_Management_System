@@ -100,9 +100,9 @@ public void getID(){
  try {
             myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/phase3", "root", "");
             String value1 = txtOrgID.getText();
-            String sql = "SELECT `id`,  `orgName`,  `orgAddress`, `orgPhoneNo`,`orgEmail` FROM `organization`"; 
-            myStat = myConn.createStatement();
-            ResultSet rs = myStat.executeQuery(sql);
+            String sql = "SELECT `id`,`orgName`,`orgAddress`,`orgPhoneNo`,`orgEmail` FROM `organization"; 
+            PreparedStatement ps = myConn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery(sql);
             while(rs.next()){
                 id = rs.getInt("id");
                 orgName = rs.getString("orgName");
@@ -415,7 +415,7 @@ public void getCamID(){
                 .addGap(227, 227, 227)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 606, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 608, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton1))
@@ -536,8 +536,8 @@ public void getCamID(){
                     campaignDetailString = myRs.getString("id") + ")" + " " + myRs.getString("campaignName") + "\n" + myRs.getString("campaignStartDate") + "\n" +
                     myRs.getString("campaignVenue") + "<BR>";
                     txtCampaignName.setEditable(false);
-            jDateChooser1.setEnabled(false);
-            txtCampainVenue.setEditable(false);
+                    jDateChooser1.setEnabled(false);
+                    txtCampainVenue.setEditable(false);
 
                 }
                 campaignDetail += campaignDetailString;
