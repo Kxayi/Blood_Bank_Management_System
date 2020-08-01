@@ -10,15 +10,21 @@ package phase3;
  */
 public class Organization {
 
+    private int organizationID;
     private String orgnizationName, orgnizationAddress, orgnizationPhoneNo, orgnizationEmail;
     private Campaign campaign;
 
-    public Organization(String orgnizationName, String orgnizationAddress, String orgnizationPhoneNo, String orgnizationEmail) {
+    public Organization(int orgnizationID, String orgnizationName, String orgnizationAddress, String orgnizationPhoneNo, String orgnizationEmail) {
+        this.organizationID = orgnizationID;
         this.orgnizationName = orgnizationName;
         this.orgnizationAddress = orgnizationAddress;
         this.orgnizationPhoneNo = orgnizationPhoneNo;
         this.orgnizationEmail = orgnizationEmail;
         campaign = new Campaign();
+    }
+
+   public void setOrgnizationID(int orgnizationID) {
+         this.organizationID = orgnizationID;
     }
 
     public void setOrgnizationName(String orgnizationName) {
@@ -41,6 +47,10 @@ public class Organization {
         this.campaign = campaign;
     }
 
+    public int getOrgnizationID() {
+        return organizationID;
+    }
+    
     public String getOrgnizationName() {
         return orgnizationName;
     }
