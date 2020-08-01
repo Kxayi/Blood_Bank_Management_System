@@ -225,7 +225,8 @@ public class LoginForm extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Login Successfully!");
                 OrgMainPage orgMain = new OrgMainPage();
                 orgMain.setVisible(true);
-                orgMain.setVisible(true);
+              //GUIOrg orgMain = new GUIOrg();
+              //orgMain.setVisible(true);
                 setVisible(false);
             }
             else{
@@ -238,6 +239,7 @@ public class LoginForm extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,e);
         }
         }
+           
     }//GEN-LAST:event_jButtonLoginActionPerformed
 
     private void jLabelRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelRegisterMouseClicked
