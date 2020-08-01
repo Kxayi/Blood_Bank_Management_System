@@ -159,7 +159,9 @@ public class RegisterForm extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(69, 69, 69)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelLogin)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabelLogin)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(jButtonRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -314,7 +316,6 @@ public class RegisterForm extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, ex);
                 }
             }
-           
     }//GEN-LAST:event_jButtonRegisterActionPerformed
 
     private void jButtonReset1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReset1ActionPerformed
@@ -386,9 +387,9 @@ public class RegisterForm extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextFieldName1;
     private javax.swing.JTextField jTextFieldUsername;
-    public static javax.swing.JTextField jTextOrgAddress;
-    public static javax.swing.JTextField jTextOrgEmail;
-    public static javax.swing.JTextField jTextOrgName;
-    public static javax.swing.JTextField jTextOrgPhone;
+    private javax.swing.JTextField jTextOrgAddress;
+    private javax.swing.JTextField jTextOrgEmail;
+    private javax.swing.JTextField jTextOrgName;
+    private javax.swing.JTextField jTextOrgPhone;
     // End of variables declaration//GEN-END:variables
 }
