@@ -10,13 +10,15 @@ package phase3;
  * @author daus
  */
 public class Campaign {
-
+    
+    private int id;
     private String campaignName, campaignStartDate, campaignVenue;
-    private double campaignTotalDonatedBlood;
+   
     private Donor donor;
     
     
-    public Campaign(String campaignName, String campaignStartDate, String campaignVenue) {
+    public Campaign(int id, String campaignName, String campaignStartDate, String campaignVenue) {
+        this.id = id;
         this.campaignName = campaignName;
         this.campaignStartDate = campaignStartDate;
         this.campaignVenue = campaignVenue;
@@ -24,10 +26,18 @@ public class Campaign {
        
     }
     public Campaign(){
+        
         this.campaignName = null;
         this.campaignStartDate = null;
         this.campaignVenue = null;
         this.donor = null;
+    }
+    public void setId(int id) {
+         this.id = id;
+    }
+    public int getId()
+    {
+        return id;
     }
 
     public Donor getDonor() {
@@ -50,14 +60,7 @@ public class Campaign {
     public String getCampaignVenue() {
         return campaignVenue;
     }
-
-    public double getCampaignTotalDonatedBlood() {
-        return campaignTotalDonatedBlood;
-    }
-    
-    public void addTotalDonatedBlood(double donorBlood) {
-        campaignTotalDonatedBlood += donorBlood;
-    }
-
+  
+   
 }
 
