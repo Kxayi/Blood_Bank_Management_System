@@ -478,9 +478,7 @@ public class BloodList extends javax.swing.JFrame {
 
     private void btnDonorGuestBackButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDonorGuestBackButton1ActionPerformed
         this.toBack();
-        OrgMainPage leaveInfo = new OrgMainPage();
-        leaveInfo.setVisible(false);
-        leaveInfo.toFront(); //go to campaign interface
+
     }//GEN-LAST:event_btnDonorGuestBackButton1ActionPerformed
 
     private void txtDonorGuestCampaignIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDonorGuestCampaignIDActionPerformed
